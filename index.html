@@ -142,6 +142,24 @@
 
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
   @media (max-width:600px){section{padding:70px 18px;}.letter{padding:34px 22px;}.mantra{font-size:1.02rem;}}
+  .together-portraits{display:flex;align-items:center;justify-content:center;gap:22px;margin-bottom:6px;}
+  .portrait-frame{position:relative;width:130px;height:130px;}
+  .portrait-ring{width:100%;height:100%;border-radius:50%;overflow:hidden;border:3px solid var(--gold);box-shadow:0 10px 26px rgba(63,46,34,.22), inset 0 0 0 5px var(--ivory);}
+  .portrait-ring img{width:100%;height:100%;object-fit:cover;display:block;}
+  
+  /* floral corners around each portrait — same palette, pure CSS */
+  .portrait-frame::before,.portrait-frame::after{content:"";position:absolute;width:34px;height:34px;pointer-events:none;
+    background:
+      radial-gradient(circle at 30% 35%, rgba(216,188,119,.85) 0 7px, transparent 8px),
+      radial-gradient(circle at 65% 25%, rgba(139,90,43,.75) 0 5px, transparent 6px),
+      radial-gradient(circle at 50% 60%, rgba(184,145,47,.8) 0 6px, transparent 7px);
+  }
+  .portrait-frame::before{top:-10px;left:-10px;}
+  .portrait-frame::after{bottom:-10px;right:-10px;transform:rotate(180deg);}
+  
+  .portrait-divider{font-size:1.4rem;color:var(--gold);opacity:.85;}
+  
+  .together-caption{margin-top:14px;margin-bottom:44px;font-family:'Great Vibes',cursive;font-size:1.6rem;color:var(--copper);text-align:center;}
 </style>
 </head>
 <body>
@@ -208,7 +226,7 @@
 
     <p>You played shuttle with a soft yellow ball, and I was your ball boy. Once, you took me to Ernakulam to buy rosewood, and a carpenter built us a folding chair and two cots that lasted three decades. You taught me kite-flying at our Karol Bagh house - a skill I mastered and perform every Independence Day in Delhi. You bought a Philips radio with its licence card, and together we listened to the commentary of the first hockey match from Kuala Lumpur. Then came our first B/W Bigston television with its dipole antenna, which needed adjusting every time the wind changed. In summer we slept outside, gazing at the stars while you told us one long story every single night. Sometimes we used to travel back to south from Delhi to Madras then Madurai then Sivakasi, Kovilpatti & Tirunelveli. Once a while we used to travel to Tenkasi by bus visit Kutralam falls to take bath in the multiple falls and return back to Sivakasi. </p>
 
-    <h3>1979 — The Hardest Year</h3>
+    <h3>1979 - The Hardest Year</h3>
 
     <p>That year tested you from every direction at once - home, native place and office: I was in Wellington Hospital for a minor operation, my sister was in RSRM Hospital for a major one, you were sent to Japan for an office training, and your own mother was undergoing radiotherapy for cancer. Somehow you carried all of it.</p>
 
@@ -295,6 +313,16 @@
 
 <!-- ================= CLOSING / CANDLE ================= -->
 <section class="closing">
+  <div class="together-portraits reveal">
+    <div class="portrait-frame">
+      <div class="portrait-ring"><img src="portrait.png" alt="S.T. Nagarathinam"></div>
+    </div>
+    <div class="portrait-divider">✿</div>
+    <div class="portrait-frame">
+      <div class="portrait-ring"><img src="mother-portrait.png" alt="Gandhimathi Stellabai"></div>
+    </div>
+  </div>
+  <p class="together-caption">Together again</p>
   <div class="candle reveal"><div class="flame"></div></div>
   <p class="dates-final reveal">Forever in our hearts · 1936 – 2026</p>
   <p class="thanks reveal">Thank you to everyone who loved him, cared for him, and walked a part of this long road beside our family. If you have a memory of him, we would be glad to hear it.</p>
